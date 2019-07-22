@@ -1,8 +1,8 @@
-## 如何在自定义组件中使用v-model
+## 如何在自定义组件中使用 v-model
 
 文章属于速记，有错误欢迎指出。风格什么的不喜勿喷。
 
-### 先来一个组件，不用vue-model，正常父子通信
+### 先来一个组件，不用 vue-model，正常父子通信
 
 ```html
 <!-- parent -->
@@ -107,7 +107,7 @@ export default {
 
 文案虽有不同，但是效果最终是一致的。
 
-### 看看官方自定义组件的v-model
+### 看看官方自定义组件的 v-model
 官方例子[https://vuefe.cn/v2/api/#model](https://vuefe.cn/v2/api/#model)
 
 有这么一句话： ```默认情况下，一个组件上的 v-model 会把 value 用作 prop 且把 input 用作 event。```
@@ -135,12 +135,12 @@ export default {
 ```
 
 ### 做一下总结：
-- 如果你懒，不想自己去处理事件，那就用默认的 'value' && 'input' 事件去处理，如果用原生事件的，甚至连model属性也可以省去。
+- 如果你懒，不想自己去处理事件，那就用默认的 'value' && 'input' 事件去处理，如果用原生事件的，甚至连 model 属性也可以省去。
 - 如果你想自己的代码比较明确，区分出自定义事件，那么下面的组合才是你的菜。
-prop和event看你自己心情定义，当然要知名见意【尽量避开关键字】
+prop 和 event 看你自己心情定义，当然要见名知意【尽量避开关键字】
 ```
 model: {
-    prop: 'someProp', // 注意，是prop，不带s。我在写这个速记的时候，多写了一个s，调试到怀疑人生
+    prop: 'someProp', // 注意，是 prop，不带 s。我在写这个速记的时候，多写了一个 s，调试到怀疑人生
     event: 'someEvent'
 }
 this.$emit('someProp', [returnValueToParent])
