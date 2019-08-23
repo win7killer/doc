@@ -17,7 +17,7 @@ module.exports = {
     }
     ...
     plugins: [
-        new htmlWebpackPathPlugin({
+        new htmlWebpackPathPlugin({ // webpack-html-independent-public-path
             publicPath: process.env.B_ENV === 'pre' ? '//pre-static.cdn.com/' : '<?CDN_URL>'
         })
     ]
