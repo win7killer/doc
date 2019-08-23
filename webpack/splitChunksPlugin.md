@@ -39,7 +39,7 @@ webpack4 相对于之前的版本，有不少变化，其中包括一些不向�
 
 ```json
 [key]: {
-    "priority": "缓存优先级权重",
+    "priority": "优先级权重，决定某个 chunk 优先打包到哪个包",
     "name": "split 出来的 chunk 的名字",
     "chunks": "应该用范围",
     "enforce": "未知",
